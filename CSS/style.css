@@ -1,0 +1,218 @@
+/* Reset default styles for box-model */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+/* Header and Navbar Styling */
+.header {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* Form Container Styling */
+.form-container {
+    padding: 20px;
+}
+
+.form-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #4caf50;
+}
+
+button {
+    display: block;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1rem;
+}
+
+/* #submit-btn {
+    background-color: #4caf50;
+} */
+
+#click-me-btn {
+    background-color: #2196f3;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* 
+tag
+.class
+#id
+tag.class
+.class1.class2
+div > .btn
+div .btn
+*/
+
+/* PRACTICE SELECTORS */
+
+/* Select by type attribute */
+[type] {
+    border: 3px solid red;
+}
+
+/* Select by name attribute */
+[for="email"] {
+    color: darkblue;
+}
+
+/* Select text type and id */
+[type="text"][id="name"] {
+    font-size: 2rem;
+    color: purple;
+}
+
+/* Select required inputs */
+[required] {
+    border: 2px solid darkblue;
+}
+
+/* Select password with maxlength of 10 */
+input[type="password"][maxlength="10"]{
+    border-width: 5px;
+}
+
+/* Select button type submit */
+button[type="submit"] {
+    background-color: blue;  
+}
+
+/* Select only links that have href starting with # */
+/* ^= */
+[href^="#"] {
+    color: red;
+}
+
+/* Select links that end with .com */
+/* $= */
+[href $= ".com"]{
+    color: blue;
+}
+/* Select links containing href "yoll" */
+/* *= */
+[href *= "yoll"] {
+    color: yellow;
+}
+
+ul {
+    font-size: 2rem;
+    margin: 2rem;
+}
+
+/* > - means direct childer */
+/* ul.list-of-items > li {
+    color: darkblue;
+} */
+
+/* decendant li's */
+/* ul.list-of-items li {
+    background-color: yellow;
+} */
+
+/* adjasent to item specified */
+/* ul.list-of-items > .item-1 + li  {
+    background-color: salmon;
+} */
+
+/* all adjasent siblings item specified */
+/* ul.list-of-items > .item-1 ~ li {
+    background-color: blue;
+} */
+
+/* Pseudo Classes */
+ul.list-of-items>li:first-child {
+    background-color: yellow;
+}
+
+ul.list-of-items>li:last-child {
+    background-color: lightblue;
+}
+
+ul.list-of-items>li:nth-child(even){
+    background-color: yellow;
+}
+
+ul.list-of-items>li:nth-child(odd){
+    background-color: grey;
+}
+
+/* Pseudo Elements */
+.form-container h2::first-letter {
+    color: darkblue;
+    font-size: 40px;
+}
+
+p::first-line{
+    color: red;
+    font-size: 20px;
+}
+
+#l-name::placeholder {
+    color: blue;
+}
+
+li::marker {
+    color: #4caf50;
+}
+
+.new-item {
+    font-size: 30px;
+    margin: 20px;
+}
+
+.new-item::before {
+    content: "✔";
+    color: gold;
+}
+
+.new-item::after {
+    content: "✔";
+    color: red;
+}
